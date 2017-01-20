@@ -1,0 +1,32 @@
+{
+  "name": "typescript-input-constraint-binding-handler",
+  "displayName": "TypeScript Input Constraint Binding Handler",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Knockout binding handler which applies constraints for HTML text input.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lecode-official/typescript-input-constraint-binding-handler.git"
+  },
+  "keywords": [
+    "Knockout",
+    "Binding",
+    "BindingHandler",
+    "TypeScript"
+  ],
+  "author": "David Neumann & Lukas Rögner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lecode-official/typescript-input-constraint-binding-handler/issues"
+  },
+  "homepage": "https://github.com/lecode-official/typescript-input-constraint-binding-handler#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-clean": "^0.3.2",
+    "gulp-typescript": "^3.0.1",
+    "run-sequence": "1.2.2",
+    "typescript": "^2.0.3"
+  }
+}
