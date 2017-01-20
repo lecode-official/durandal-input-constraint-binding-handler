@@ -2,7 +2,7 @@
   "name": "typescript-input-constraint-binding-handler",
   "homepage": "https://github.com/lecode-official/typescript-input-constraint-binding-handler",
   "authors": [
-    "David Neumann <david.neumann@lecode.com>",
+    "David Neumann <david.neumann@lecode.de>",
     "Lukas Rögner <lukas.roegner@icloud.com>"
   ],
   "description": "Knockout binding handler which applies constraints for HTML text input.",
