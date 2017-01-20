@@ -1,0 +1,36 @@
+{
+  "name": "typescript-input-constraint-binding-handler",
+  "homepage": "https://github.com/lecode-official/typescript-input-constraint-binding-handler",
+  "authors": [
+    "David Neumann <david.neumann@lecode.com>",
+    "Lukas Rögner <lukas.roegner@icloud.com>"
+  ],
+  "description": "Knockout binding handler which applies constraints for HTML text input.",
+  "main": "./build/typescript-input-constraint-binding-handler.d.ts",
+  "moduleType": [
+    "amd"
+  ],
+  "devDependencies": {
+    "DefinitelyTyped": "*"
+  },
+  "keywords": [
+    "Knockout",
+    "Binding",
+    "BindingHandler",
+    "TypeScript"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "tsconfig.json",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "knockout": "3.4.0",
+    "jquery": "~3.1.1"
+  }
+}
