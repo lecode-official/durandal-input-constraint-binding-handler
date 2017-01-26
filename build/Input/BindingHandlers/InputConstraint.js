@@ -61,14 +61,14 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
                 jquery(element).blur(function (evt) {
                     // Capitalizes the input
                     if (!!options.capitalize && jquery(element).val().length > 0) {
-                        jquery(element).val(jquery(element).val().charAt(0).toUpperCase() + jquery(element).val().slice(1));
+                        jquery(element).val(jquery(element).val().charAt(0).toUpperCase() + jquery(element).val().slice(1)).change();
                     }
                     // Formats the input
                     if (!!options.upperCase && jquery(element).val().length > 0) {
-                        jquery(element).val(jquery(element).val().toUpperCase());
+                        jquery(element).val(jquery(element).val().toUpperCase()).change();
                     }
                     if (!!options.lowerCase && jquery(element).val().length > 0) {
-                        jquery(element).val(jquery(element).val().toLowerCase());
+                        jquery(element).val(jquery(element).val().toLowerCase()).change();
                     }
                 });
             }

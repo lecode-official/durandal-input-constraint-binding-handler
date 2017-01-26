@@ -2,7 +2,7 @@
   "name": "typescript-input-constraint-binding-handler",
   "displayName": "TypeScript Input Constraint Binding Handler",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Knockout binding handler which applies constraints for HTML text input.",
   "repository": {
     "type": "git",
