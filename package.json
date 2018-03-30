@@ -1,7 +1,7 @@
 {
   "name": "durandal-input-constraint-binding-handler",
   "displayName": "Durandal Input Constraint Binding Handler",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Knockout binding handler which applies constraints for HTML text input.",
   "repository": {
     "type": "git",
