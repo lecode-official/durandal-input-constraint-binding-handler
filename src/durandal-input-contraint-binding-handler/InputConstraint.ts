@@ -35,7 +35,7 @@ knockout.bindingHandlers["inputConstraint"] = {
                     // Allows Ctrl+X
                     (e.keyCode == 88 && e.ctrlKey === true) ||
                     // Allows home, end, left, right
-                    (e.keyCode >= 35 && e.keyCode <= 39)) {
+                    (e.keyCode && e.keyCode >= 35 && e.keyCode <= 39)) {
                     // Returns as this input is valid
                     return;
                 }
@@ -46,9 +46,9 @@ knockout.bindingHandlers["inputConstraint"] = {
                     // Allows comma, dash and period
                     if ((jquery.inArray(e.keyCode, [188, 189, 190]) !== -1) ||
                         //Allows numbers
-                        (!e.shiftKey && !e.ctrlKey && !e.altKey && (e.keyCode >= 48 && e.keyCode <= 57)) || 
+                        (!e.shiftKey && !e.ctrlKey && !e.altKey && (e.keyCode && e.keyCode >= 48 && e.keyCode <= 57)) || 
                         // Allows numpad numbers
-                        (e.keyCode >= 96 && e.keyCode <= 105)) {
+                        (e.keyCode && e.keyCode >= 96 && e.keyCode <= 105)) {
                         // Returns as this input is valid
                         return;
                     }
@@ -58,9 +58,9 @@ knockout.bindingHandlers["inputConstraint"] = {
                 if (!!options.literal) {
 
                     // Allows anything but numeric values
-                    if ((e.shiftKey || e.ctrlKey || e.altKey || (e.keyCode < 48 || e.keyCode > 57)) && 
+                    if ((e.shiftKey || e.ctrlKey || e.altKey || (e.keyCode && (e.keyCode < 48 || e.keyCode > 57))) && 
                         // Allows anything but numeric values
-                        (e.keyCode < 96 || e.keyCode > 105)) {
+                        (e.keyCode && (e.keyCode < 96 || e.keyCode > 105))) {
                         // Returns as this input is valid
                         return;
                     }
@@ -75,16 +75,16 @@ knockout.bindingHandlers["inputConstraint"] = {
             jquery(element).blur(evt => {
                 
                 // Capitalizes the input
-                if (!!options.capitalize && jquery(element).val().length > 0) {
-                    jquery(element).val(jquery(element).val().charAt(0).toUpperCase() + jquery(element).val().slice(1)).change();
+                if (!!options.capitalize && (<string>jquery(element).val()).length > 0) {
+                    jquery(element).val((<string>jquery(element).val()).charAt(0).toUpperCase() + (<string>jquery(element).val()).slice(1)).change();
                 }
 
                 // Formats the input
-                if (!!options.upperCase && jquery(element).val().length > 0) {
-                    jquery(element).val(jquery(element).val().toUpperCase()).change();
+                if (!!options.upperCase && (<string>jquery(element).val()).length > 0) {
+                    jquery(element).val((<string>jquery(element).val()).toUpperCase()).change();
                 }
-                if (!!options.lowerCase && jquery(element).val().length > 0) {
-                    jquery(element).val(jquery(element).val().toLowerCase()).change();
+                if (!!options.lowerCase && (<string>jquery(element).val()).length > 0) {
+                    jquery(element).val((<string>jquery(element).val()).toLowerCase()).change();
                 }
             });
         }
