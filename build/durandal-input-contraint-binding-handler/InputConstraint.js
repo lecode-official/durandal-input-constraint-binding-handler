@@ -1,6 +1,7 @@
 // #region Import Directives
 define(["require", "exports", "jquery", "knockout"], function (require, exports, jquery, knockout) {
     "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
     // #endregion
     /**
      * Represents a binding handler for constraints on text input.
@@ -27,7 +28,7 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
                         // Allows Ctrl+X
                         (e.keyCode == 88 && e.ctrlKey === true) ||
                         // Allows home, end, left, right
-                        (e.keyCode >= 35 && e.keyCode <= 39)) {
+                        (e.keyCode && e.keyCode >= 35 && e.keyCode <= 39)) {
                         // Returns as this input is valid
                         return;
                     }
@@ -36,9 +37,9 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
                         // Allows comma, dash and period
                         if ((jquery.inArray(e.keyCode, [188, 189, 190]) !== -1) ||
                             //Allows numbers
-                            (!e.shiftKey && !e.ctrlKey && !e.altKey && (e.keyCode >= 48 && e.keyCode <= 57)) ||
+                            (!e.shiftKey && !e.ctrlKey && !e.altKey && (e.keyCode && e.keyCode >= 48 && e.keyCode <= 57)) ||
                             // Allows numpad numbers
-                            (e.keyCode >= 96 && e.keyCode <= 105)) {
+                            (e.keyCode && e.keyCode >= 96 && e.keyCode <= 105)) {
                             // Returns as this input is valid
                             return;
                         }
@@ -46,9 +47,9 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
                     // Checks whether literal values should be valid
                     if (!!options.literal) {
                         // Allows anything but numeric values
-                        if ((e.shiftKey || e.ctrlKey || e.altKey || (e.keyCode < 48 || e.keyCode > 57)) &&
+                        if ((e.shiftKey || e.ctrlKey || e.altKey || (e.keyCode && (e.keyCode < 48 || e.keyCode > 57))) &&
                             // Allows anything but numeric values
-                            (e.keyCode < 96 || e.keyCode > 105)) {
+                            (e.keyCode && (e.keyCode < 96 || e.keyCode > 105))) {
                             // Returns as this input is valid
                             return;
                         }
