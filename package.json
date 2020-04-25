@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/lecode-official/durandal-input-constraint-binding-handler#readme",
   "dependencies": {
-    "knockout": "3.4.0",
+    "knockout": "3.5.0",
     "jquery": "~3.1.1",
     "@types/jquery": "3.3.1",
     "@types/knockout": "3.4.53"
